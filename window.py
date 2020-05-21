@@ -9,6 +9,7 @@ class MyWindow(Gtk.Window):
         button = Gtk.Button(label = "Click Here")
         self.add(button)
         button.connect("clicked", self.on_button_clicked)
+        self.set_resizable(False)
     def on_button_clicked(self, widget):
         print("Clicked Here")
 
