@@ -12,6 +12,7 @@ class MyApplication(Gtk.Application):
         # set the title
         window.set_title("Welcome to GNOME")
         # show the window
+        window.set_default_size(700, 100)
         window.show_all()
 
 # create and run the application, exit with the value returned by
