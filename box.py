@@ -6,7 +6,7 @@ from gi.repository import Gtk
 class MyBoxWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title = "Box Window")
-        box = Gtk.Box()
+        box = Gtk.Box(orientation = Gtk.Orientation.VERTICAL)
         box.pack_start(Gtk.Button(label = "Button 1"), True, True, 0)
         box.pack_start(Gtk.Button(label = "Button 2"), True, True, 0)
         self.add(box)
