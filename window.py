@@ -13,6 +13,8 @@ class MyApplication(Gtk.Application):
         window.set_title("Welcome to GNOME")
         # show the window
         window.set_default_size(700, 100)
+        # CENTER, CENTER_ALWAYS and CENTER_ON_PARENT modifiers won't positon window in center
+        window.set_position(Gtk.WindowPosition.CENTER)
         window.show_all()
 
 # create and run the application, exit with the value returned by
@@ -20,4 +22,3 @@ class MyApplication(Gtk.Application):
 app = MyApplication()
 exit_status = app.run(sys.argv)
 sys.exit(exit_status)
-
