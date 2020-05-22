@@ -11,7 +11,11 @@ class MyListBoxWindow(Gtk.Window):
         self.add(list_box)
 
         row = Gtk.ListBoxRow()
-        row.add(Gtk.Button(label = "button1"))
+        box = Gtk.Box(orientation = Gtk.Orientation.HORIZONTAL)
+        row.add(box)
+
+        box.pack_start(Gtk.Label(label = "Hello\nWorld"), False, False, 0)
+        box.pack_start(Gtk.Button(label = "button1"), False, False, 0)
 
         list_box.add(row)
 
