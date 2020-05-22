@@ -6,6 +6,7 @@ from gi.repository import Gtk
 class MyListBoxWindow(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title = "ListBox")
+        self.set_default_size(700, 100)
 
         list_box = Gtk.ListBox()
         self.add(list_box)
@@ -14,9 +15,10 @@ class MyListBoxWindow(Gtk.Window):
         box = Gtk.Box(orientation = Gtk.Orientation.HORIZONTAL)
         row.add(box)
 
-        box.pack_start(Gtk.Label(label = "Hello\nWorld"), False, False, 0)
-        box.pack_start(Gtk.Button(label = "button1"), False, False, 0)
-
+        label = Gtk.Label(label = "Hello\nWorld")
+        box.set_border_width(10)
+        box.pack_start(label, True, False, 0)
+        box.pack_start(Gtk.Button(label = "button1"), True, False, 0)
         list_box.add(row)
 
         row = Gtk.ListBoxRow()
