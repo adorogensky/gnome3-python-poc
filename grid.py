@@ -19,7 +19,8 @@ class MyGridWindow(Gtk.Window):
         grid.add(button1)
         grid.add(button2)
         grid.add(button4)
-        grid.attach(button3, 0, 1, 2, 1)
+        grid.attach_next_to(button3, button1, Gtk.PositionType.BOTTOM, 2, 1)
+        grid.attach_next_to(button5, button3, Gtk.PositionType.RIGHT, 1, 1)
 
         self.add(grid)
 
